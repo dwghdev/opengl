@@ -36,6 +36,9 @@ int main() {
   glBindBuffer(GL_ARRAY_BUFFER, buffer);
   glBufferData(GL_ARRAY_BUFFER, 6 * sizeof(float), positions, GL_STATIC_DRAW);
 
+  glEnableVertexAttribArray(0);
+  glVertextAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(float) * 2, 0); 
+
   // Loop until user closes the window
   while (!glfwWindowShouldClose(window)) {
     // Render here
